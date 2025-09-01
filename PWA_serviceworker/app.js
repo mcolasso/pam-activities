@@ -16,4 +16,13 @@ const soma = (a, b) => {
   console.log( 'A mutiplicacao de de a x b eh', s);
 
 
+
+    if ('serviceWorker' in navigator) {
+  alert('O seu navegador tem suporte para ServiceWorker!');
+    } else {
+  alert('O seu navegador não tem suporte!');
+    }
+
+
+
   
