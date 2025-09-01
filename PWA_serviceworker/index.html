@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.json" />
+    <title>Aprendendo PWA</title>
+
+    <style>
+        .pinguim {
+            display: block;
+            margin-top: 10px;
+            margin-left: 0;
+            width: 150px; 
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aprendendo PWA!!!</h1>
+
+    <img class="pinguim" src="imagens/pinguim.png" alt="pinguim" />
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(() => console.log('Service Worker registrado!'))
+                .catch(error => console.log('Falha ao registrar:', error));
+        }
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
